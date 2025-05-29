@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Olvasó Nyilvántartás</title>
+    <style>
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <fieldset>
+            <legend>Olvasó Rögzítés</legend>
+            <form id="olvasoForm">
+                <p>
+                    <label for="olvaso_id">Olvasó ID:</label>
+                    <input type="number" id="olvaso_id" name="olvaso_id" required placeholder="Olvasó azonosító" />
+                </p>
+                <p>
+                    <label for="nev">Név:</label>
+                    <input type="text" id="nev" name="nev" required placeholder="Név" />
+                </p>
+                <p>
+                    <label for="regisztracio_datuma">Regisztráció dátuma:</label>
+                    <input type="date" id="regisztracio_datuma" name="regisztracio_datuma" required />
+                </p>
+                <p>
+                    <label for="lakcim">Lakcím:</label>
+                    <input type="text" id="lakcim" name="lakcim" required placeholder="Lakcím" />
+                </p>
+                <p>
+                    <label for="tagsagszam">Tagságszám:</label>
+                    <input type="text" id="tagsagszam" name="tagsagszam" required placeholder="Tagságszám" />
+                </p>
+                <p>
+                    <label for="kolcsonzes_szam">Kölcsönzések száma:</label>
+                    <input type="number" id="kolcsonzes_szam" name="kolcsonzes_szam" required placeholder="Kölcsönzések száma" />
+                </p>
+                <p>
+                    <button type="submit">Olvasó Rögzítése</button>
+                </p>
+            </form>
+        </fieldset>
+
+        <h3>Olvasók Táblázata</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Olvasó ID</th>
+                    <th>Név</th>
+                    <th>Regisztráció dátuma</th>
+                    <th>Lakcím</th>
+                    <th>Tagságszám</th>
+                    <th>Kölcsönzések száma</th>
+                </tr>
+            </thead>
+            <tbody id="olvasoTable"></tbody>
+        </table>
+    </div>
+
+    <script src="olvaso.js"></script>
+</body>
+</html>
